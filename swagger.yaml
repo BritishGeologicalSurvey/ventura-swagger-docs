@@ -21,7 +21,7 @@ paths:
               type: string
               items:
                 type: integer
-            example: '["1,2,3","4,5,6"]'
+            example: [\"1,2,3\",\"4,5,6\"]
       responses:
         default:
           description: Default error sample response
