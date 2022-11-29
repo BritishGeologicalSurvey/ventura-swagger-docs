@@ -44,7 +44,7 @@ paths:
               type: string
               items:
                 type: integer
-            example: {"catchmentN4populationChange":[4,6,7],"PopulationChange":[0.5,10,0],"StartDate":"2012-01-30","EndDate":"2012-02-09","nodes_numbers_to_change":[3,5],"RC_to_change":[0.9,0.7]}
+            example: "{'catchmentN4populationChange': [4, 6, 7], 'PopulationChange': [0.5, 10, 0], 'StartDate': '2012-01-30', 'EndDate': '2012-02-09','nodes_numbers_to_change': [3, 5], 'RC_to_change': [0.9, 0.7]}"
       responses:
         default:
           description: Default error sample response
