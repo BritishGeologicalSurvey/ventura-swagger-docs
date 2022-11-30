@@ -88,7 +88,7 @@ paths:
               type: string
               items:
                 type: integer
-            example: "{'catchmentN4populationChange': [4, 6, 7], 'PopulationChange': [0.5, 10, 0], 'StartDate': '2012-01-30', 'EndDate': '2012-02-09','nodes_numbers_to_change': [3, 5], 'RC_to_change': [0.9, 0.7]}"
+            example: "{'nodes_numbers_to_change': [3, 5], 'RC_to_change': [0.9, 0.7], 'catchmentN4populationChange': [4, 6, 7], 'PopulationChange': [0.5, 10, 1], 'StartDate': '2012-01-30', 'EndDate': '2012-01-31', 'RainfallMultiplier': 1, 'PopulationGrowth': 1, 'catchmentN4wiltPointChange': [2, 5], 'newWiltPointMultiplier': [1, 1.1], 'catchmentN4demandChange': [5, 6], 'NewPerCapitaDemand': [100, 120]}"
       responses:
         default:
           description: Default error sample response
