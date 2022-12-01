@@ -15,6 +15,8 @@ paths:
       summary: runs the model
       description: runs the model using your parama
       operationId: vdr_send
+      tags:
+        - Eduardo
       requestBody:
         content:
           application/json:
@@ -37,6 +39,8 @@ paths:
       summary: runs the model
       description: runs the model using your parama
       operationId: vdr_send2
+      tags:
+        - Eduardo
       requestBody:
         content:
           application/json:
@@ -59,6 +63,8 @@ paths:
       summary: runs the model
       description: runs the model using your parama
       operationId: vdr_SendDict
+      tags:
+        - Vladimir
       requestBody:
         content:
           application/json:
@@ -79,22 +85,99 @@ paths:
   /vdr_SendDict2:
     post:
       summary: runs the model
-      description: runs the model using your parama
+      description: |
+        
+        | VARIABLE | DESCRIPTION | FORMAT | EXAMPLE |
+        |---|---|---|---|
+        | nodes_numbers_to_change | List of catchments where RC is changing | List of integers to strings (0-43) | 3,5 |
+        | RC_to_change | New RC for requested catchments | List of float to strings (0-1.0), NB should be same size as   above | 0.9,0.7 |
+        | catchmentN4populationChange | List of catchments where population is changing | List of integers to strings (0-43) | 4,6,7 |
+        | PopulationChange | New population ratio multipliers for requested catchments | List of float to strings , NB should be same size as above | 0.9,0.7,1.1 |
+        | StartDate | Start date for the simulation | yyyy-mm-dd | 12/11/2011 |
+        | EndDate | End date for the simulation | yyyy-mm-dd | 15/11/2011 |
+        | PopulationGrowth | Value of overall population increase multiplier (e.g. for   2,037 and 2,050) | string generated from a float, e.g. str(1.2) | 1.2 |
+        | RainfallMultiplier | Value of overall rainfall increase multipliers linked to CC   (for 2,037 and 2,050) | string generated from a float, e.g. str(1.2) | 1.1 |
+        | catchmentN4wiltPointChange | List of catchments where attenuation volume is changing | List of integers to strings (0-43) | 4,6,7 |
+        | newWiltPointMultiplier | New Attenuation depth  multipliers (Wilt) for   requested catchments | List of float to strings, NB should be same size as above | 0.9,0.7,1.1 |
+        | catchmentN4demandChange | List of catchments where Demand is changing | List of integers to strings (0-43) | 3,5 |
+        | NewPerCapitaDemand | New demand_per_capita values for requested catchments | List of float to strings , NB should be same size as above | 90,85 |
+
       operationId: vdr_SendDict2
+      tags:
+        - Vladimir
       requestBody:
         content:
           application/json:
             schema:
               type: string
-              items:
-                type: integer
             example: "{'nodes_numbers_to_change': [3, 5], 'RC_to_change': [0.9, 0.7], 'catchmentN4populationChange': [4, 6, 7], 'PopulationChange': [0.5, 10, 1], 'StartDate': '2012-01-30', 'EndDate': '2012-01-31', 'RainfallMultiplier': 1, 'PopulationGrowth': 1, 'catchmentN4wiltPointChange': [2, 5], 'newWiltPointMultiplier': [1, 1.1], 'catchmentN4demandChange': [5, 6], 'NewPerCapitaDemand': [100, 120]}"
       responses:
         default:
           description: Default error sample response
           content:
             application/json:
-              examples:
-                sample response:
-                  value: >-
-                    TBC
+              schema:
+                type: object
+                properties:
+                  ManFlowsDemand2foul:
+                    type: array
+                    items:
+                      type: number
+                      example: [136054.683, 184582.3193]
+                  ManNitrate:
+                    type: array
+                    items:
+                      type: number
+                      example: [0.02, 0.02]
+                  ManAmmonia:
+                    type: array
+                    items:
+                      type: number
+                      example: [0.0007499999999999999, 0.0007499999999999999]
+                  ManRiverP:
+                    type: array
+                    items:
+                      type: number
+                      example: [0.009509415862330723, 0.009509415862330723]
+                  tanks:
+                    type: array
+                    items:
+                      type: string
+                      example: ["Birkin Brook - Mobberley Brook to River Bollin (including Rostherne Brook)-gw", "Mon, 30 Jan 2012 00:00:00 GMT", 0]
+                  ManRiverFlows:
+                    type: array
+                    items:
+                      type: number
+                      example: [775725.867773827, 313430.4267159084]
+                  ManWWTPdischargeFlows:
+                    type: array
+                    items:
+                      type: number
+                      example: [2505262.956387399, 876619.144462528]
+                  ManSewerFlows:
+                    type: array
+                    items:
+                      type: number
+                      example: [2583277.9504922656, 903917.4514977605]
+                  NOT_AVAIL_ManStormdischargeFlows:
+                    type: array
+                    items:
+                      type: number
+                      example: [136054.683, 184582.3193]
+                  ManRiverDFcolumns:
+                    type: array
+                    items:
+                      type: string
+                      example: ["Birkin Brook - Mobberley Brook to River Bollin (including Rostherne Brook)-to-Bollin (Ashley Mill to Manchester Ship Canal)", "Birkin Brook - Source to Mobberley Brook-to-Birkin Brook - Mobberley Brook to River Bollin (including Rostherne Brook)"]
+                  NOT_AVAIL_ManWWTPdischargeDFcolumns:
+                    type: array
+                    items:
+                      type: number
+                      example: [136054.683, 184582.3193]
+                  ManSewerDFcolumns:
+                    type: array
+                    items:
+                      type: string
+                      example: ["centralised_sewer-to-WHALEY BRIDGE STW", "centralised_sewer-to-WILMSLOW STW"]
+                    
+  
