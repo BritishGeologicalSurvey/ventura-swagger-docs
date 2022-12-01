@@ -159,7 +159,7 @@ paths:
                     items:
                       type: number
                       example: [2583277.9504922656, 903917.4514977605]
-                  NOT_AVAIL_ManStormdischargeFlows:
+                  ManStormdischargeFlows:
                     type: array
                     items:
                       type: number
@@ -169,7 +169,7 @@ paths:
                     items:
                       type: string
                       example: ["Birkin Brook - Mobberley Brook to River Bollin (including Rostherne Brook)-to-Bollin (Ashley Mill to Manchester Ship Canal)", "Birkin Brook - Source to Mobberley Brook-to-Birkin Brook - Mobberley Brook to River Bollin (including Rostherne Brook)"]
-                  NOT_AVAIL_ManWWTPdischargeDFcolumns:
+                  ManWWTPdischargeDFcolumns:
                     type: array
                     items:
                       type: number
