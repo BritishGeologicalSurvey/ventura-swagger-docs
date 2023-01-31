@@ -129,6 +129,11 @@ paths:
                     items:
                       type: number
                       example: [0.02, 0.02]
+                  ManFoulToStormFlows:
+                    type: array
+                    items:
+                      type: number
+                      example: [0.00008660074350406832, 0.00007748620241704489]
                   ManAmmonia:
                     type: array
                     items:
