@@ -117,8 +117,8 @@ paths:
         | newWiltPointMultiplier | New Attenuation depth  multipliers (Wilt) for   requested catchments | List of float to strings, NB should be same size as above | 0.9,0.7,1.1 |
         | catchmentN4demandChange | List of catchments where Demand is changing | List of integers to strings (0-43) | 3,5 |
         | NewPerCapitaDemand | New demand_per_capita values for requested catchments | List of float to strings , NB should be same size as above | 90,85 |
-        | days2delete | TBC | integer | 100 |
-        | MinSimLength | TBC | integer | 2 |
+        | days2delete | Number of days to be deleted (i.e. effectively the run-in period). When the days2delete variable is bigger than the number of days between the (EndDate-MinSimLength) and the beginning of the available climatic dataset (currently 1 Jan 2011), it will be trimed accordingly | integer | 100 |
+        | MinSimLength | Minimum length of the time period returned by the API | integer | 2 |
 
       operationId: vdr_SendDict2
       tags:
