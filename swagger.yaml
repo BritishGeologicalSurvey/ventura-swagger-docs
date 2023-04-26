@@ -2,102 +2,102 @@ openapi: 3.0.0
 info:
   version: 0.0.1
   title: VENTURA Manchester Model API
-  description: This is a description of the VENTURA API
+  description: VENTURA API
 servers:
   - url: https://e96kri69.pythonanywhere.com/
     description: Development server November 2022
-  - url: https://bingfield.drawscapes.com/
-    description: this is the development api
+  # - url: https://bingfield.drawscapes.com/
+  #   description: this is the development api
 
 paths:
-  /vdr_send:
-    post:
-      summary: runs the model
-      description: runs the model using your parama
-      operationId: vdr_send
-      tags:
-        - Eduardo
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: string
-              items:
-                type: integer
-            example:
-              [
-                '3,5',
-                '0.9,0.7',
-                '4,6,7',
-                '0.5,10,0',
-                '2012-01-30',
-                '2012-01-31',
-              ]
-      responses:
-        default:
-          description: Default error sample response
-          content:
-            application/json:
-              examples:
-                sample response:
-                  value: >-
-                    TBC
-  /vdr_send2:
-    post:
-      summary: runs the model
-      description: runs the model using your parama
-      operationId: vdr_send2
-      tags:
-        - Eduardo
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: string
-              items:
-                type: integer
-            example:
-              [
-                '3,5',
-                '0.9,0.7',
-                '4,6,7',
-                '0.5,10,0',
-                '2012-01-30',
-                '2012-01-31',
-              ]
-      responses:
-        default:
-          description: Default error sample response
-          content:
-            application/json:
-              examples:
-                sample response:
-                  value: >-
-                    TBC
-  /vdr_SendDict:
-    post:
-      summary: runs the model
-      description: runs the model using your parama
-      operationId: vdr_SendDict
-      tags:
-        - Vladimir
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: string
-              items:
-                type: integer
-            example: "{'catchmentN4populationChange': [4, 6, 7], 'PopulationChange': [0.5, 10, 0], 'StartDate': '2012-01-30', 'EndDate': '2012-02-09','nodes_numbers_to_change': [3, 5], 'RC_to_change': [0.9, 0.7]}"
-      responses:
-        default:
-          description: Default error sample response
-          content:
-            application/json:
-              examples:
-                sample response:
-                  value: >-
-                    TBC
+  # /vdr_send:
+  #   post:
+  #     summary: runs the model
+  #     description: runs the model using your parama
+  #     operationId: vdr_send
+  #     tags:
+  #       - Eduardo
+  #     requestBody:
+  #       content:
+  #         application/json:
+  #           schema:
+  #             type: string
+  #             items:
+  #               type: integer
+  #           example:
+  #             [
+  #               '3,5',
+  #               '0.9,0.7',
+  #               '4,6,7',
+  #               '0.5,10,0',
+  #               '2012-01-30',
+  #               '2012-01-31',
+  #             ]
+  #     responses:
+  #       default:
+  #         description: Default error sample response
+  #         content:
+  #           application/json:
+  #             examples:
+  #               sample response:
+  #                 value: >-
+  #                   TBC
+  # /vdr_send2:
+  #   post:
+  #     summary: runs the model
+  #     description: runs the model using your parama
+  #     operationId: vdr_send2
+  #     tags:
+  #       - Eduardo
+  #     requestBody:
+  #       content:
+  #         application/json:
+  #           schema:
+  #             type: string
+  #             items:
+  #               type: integer
+  #           example:
+  #             [
+  #               '3,5',
+  #               '0.9,0.7',
+  #               '4,6,7',
+  #               '0.5,10,0',
+  #               '2012-01-30',
+  #               '2012-01-31',
+  #             ]
+  #     responses:
+  #       default:
+  #         description: Default error sample response
+  #         content:
+  #           application/json:
+  #             examples:
+  #               sample response:
+  #                 value: >-
+  #                   TBC
+  # /vdr_SendDict:
+  #   post:
+  #     summary: runs the model
+  #     description: runs the model using your parama
+  #     operationId: vdr_SendDict
+  #     tags:
+  #       - Vladimir
+  #     requestBody:
+  #       content:
+  #         application/json:
+  #           schema:
+  #             type: string
+  #             items:
+  #               type: integer
+  #           example: "{'catchmentN4populationChange': [4, 6, 7], 'PopulationChange': [0.5, 10, 0], 'StartDate': '2012-01-30', 'EndDate': '2012-02-09','nodes_numbers_to_change': [3, 5], 'RC_to_change': [0.9, 0.7]}"
+  #     responses:
+  #       default:
+  #         description: Default error sample response
+  #         content:
+  #           application/json:
+  #             examples:
+  #               sample response:
+  #                 value: >-
+  #                   TBC
   /vdr_SendDict2:
     post:
       summary: runs the model
