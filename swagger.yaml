@@ -128,7 +128,7 @@ paths:
           application/json:
             schema:
               type: string
-            example: "{'nodes_numbers_to_change': [3, 5], 'RC_to_change': [0.9, 0.7], 'catchmentN4populationChange': [4, 6, 7], 'PopulationChange': [0.5, 10, 1], 'StartDate': '2012-01-30', 'EndDate': '2012-01-31', 'RainfallMultiplier': 1, 'PopulationGrowth': 1, 'catchmentN4wiltPointChange': [2, 5], 'newWiltPointMultiplier': [1, 1.1], 'catchmentN4demandChange': [5, 6], 'NewPerCapitaDemand': [100, 120], 'days2delete': 100, 'MinSimLength': 2}"
+            example: "{'nodes_numbers_to_change': [], 'RC_to_change': [], 'catchmentN4populationChange': [], 'PopulationChange': [], 'StartDate': '2011-11-30', 'EndDate': '2012-01-30', 'RainfallMultiplier': 1, 'PopulationGrowth': 1, 'catchmentN4wiltPointChange': [], 'newWiltPointMultiplier': [], 'catchmentN4demandChange': [], 'NewPerCapitaDemand': [], 'days2delete': 100, 'MinSimLength': 2}"
       responses:
         200:
           description: Response from the WSIMod
