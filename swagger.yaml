@@ -137,6 +137,11 @@ paths:
               schema:
                 type: object
                 properties:
+                  ManExcessWater:
+                    type: array
+                    items:
+                      type: number
+                      example: [24505.5299089307, 57244.324997593314]
                   ManFlowsDemand2foul:
                     type: array
                     items:
