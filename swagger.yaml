@@ -4,10 +4,10 @@ info:
   title: VENTURA Manchester Model API
   description: VENTURA API
 servers:
-  - url: https://e96kri69.pythonanywhere.com/
-    description: Development server November 2022
-  # - url: https://bingfield.drawscapes.com/
-  #   description: this is the development api
+  # - url: https://e96kri69.pythonanywhere.com/
+  #   description: Development server November 2022
+  - url: https://bingfield.drawscapes.com/
+    description: Live Server run by Ed after migrading from V server
 
 paths:
   # /vdr_send:
@@ -122,7 +122,7 @@ paths:
 
       operationId: vdr_SendDict2
       tags:
-        - Vladimir
+        - Eduardo
       requestBody:
         content:
           application/json:
